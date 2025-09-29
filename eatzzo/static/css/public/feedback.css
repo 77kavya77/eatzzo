@@ -1,0 +1,222 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.feedback {
+    width: 100%;
+    min-height: 100vh;
+    background: url(/eatzzo/static/images/feedback/FEEDBACK.png) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px; /* Further increased max-width */
+    margin: 20px 0;
+}
+
+/* Clear floats after the columns */
+.row-1::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 15px;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+.col-75 {
+    float: right;
+    width: 75%;
+    margin-top: 15px;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+h2 {
+    text-align: center;
+    padding: 25px;
+    font-family: poppins, sans-serif;
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.col-75 #feedback-name,
+#feedback-email,
+#message,
+#subject {
+    width: 100%;
+    max-width: 95%;
+    padding: 18px;
+    border: 2px solid #425010;
+    border-radius: 25px;
+    resize: vertical;
+    font-size: 17px;
+}
+
+.col-25 span {
+    color: red;
+}
+
+.col-75 input[type=radio] {
+    accent-color: #425010;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin: 12px;
+}
+
+.col-75 .radio-inline {
+    margin: 18px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 17px;
+}
+
+.col-25 label {
+    padding: 18px 18px 18px 0;
+    display: inline-block;
+    font-family: poppins, sans-serif;
+    font-size: 17px;
+}
+
+.row-2 {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.row-2 input[type=submit] {
+    background-color: #425010;
+    color: white;
+    padding: 18px 35px;
+    border: none;
+    border-radius: 59px;
+    cursor: pointer;
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.row-2 input[type=submit]:hover {
+    background-color: #fff;
+    color: #425010;
+    border: 1px solid #425010;
+}
+
+/* Tablet/Laptop Responsive Adjustments */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 900px;
+        padding: 35px;
+    }
+    
+    h2 {
+        font-size: 38px;
+        padding: 20px;
+    }
+    
+    .col-75 input[type=radio] {
+        width: 22px;
+        height: 22px;
+        margin: 10px;
+    }
+    
+    .col-75 .radio-inline {
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 800px;
+        padding: 30px;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    .col-25, .col-75 {
+        padding-left: 20px;
+    }
+}
+
+/* Tablet Landscape */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 700px;
+        padding: 25px;
+    }
+    
+    .col-25, .col-75 {
+        width: 100%;
+        padding-left: 0;
+    }
+    
+    h2 {
+        font-size: 34px;
+        padding: 15px;
+    }
+    
+    .col-75 .radio-inline {
+        margin: 12px;
+    }
+    
+    .row-2 input[type=submit] {
+        padding: 16px 30px;
+        font-size: 18px;
+    }
+}
+
+/* Tablet Portrait */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    .col-75 input[type=radio] {
+        width: 20px;
+        height: 20px;
+        margin: 8px;
+    }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 28px;
+    }
+    
+    .container {
+        padding: 18px;
+    }
+    
+    .col-75 .radio-inline {
+        margin: 8px;
+        font-size: 16px;
+    }
+    
+    .row-2 input[type=submit] {
+        padding: 14px 25px;
+        font-size: 16px;
+    }
+}
